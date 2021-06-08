@@ -11,3 +11,54 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.custom-nav{
+  height: 100px;
+  /* background-color: black; */
+  /* opacity: 90%; */
+}
+
+.subheader{
+  background-image: linear-gradient(to right,#2d0039,#15003c);
+  color: white;
+  height: 350px;
+  padding-top: 126px;
+  margin-bottom: 8vh;
+}
+
+.forms{
+  padding-bottom: 10vh;
+  
+}
+
+.heading-text{
+  color: red;
+  padding-bottom: 3vh;
+}
+
+.submit{
+  margin-top: 2rem;
+  width: 250px;
+  border-radius: 0;
+}
+
+.tnc{
+  font-size: small;
+}
+
+.banner{
+  background-image: url(../src/assets/bg_1.jpeg);
+  color: white;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.banner-text{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.footer{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
