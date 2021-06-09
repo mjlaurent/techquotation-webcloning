@@ -1,8 +1,7 @@
 import logo from "../assets/logo-tq.png";
-import Navbar from "react-bootstrap/Navbar";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
 import { useState, useRef, useEffect } from "react";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
 
 const NavBar = () => {
     const [navBackground, setNavBackground] = useState(false);
@@ -10,23 +9,33 @@ const NavBar = () => {
     navRef.current = navBackground;
     useEffect(() => {
         const handleScroll = () => {
-            const primaryShow = window.scrollY > 50;
+            const primaryShow = window.scrollY > 30;
             setNavBackground(false);
             if (navRef.current !== primaryShow) {
                 setNavBackground(true);
             }
         };
         document.addEventListener("scroll", handleScroll);
+        return () => {
+            document.removeEventListener("scroll", handleScroll);
+        };
     }, []);
     const navBarStyling = {
-        transition: "0.5s ease",
+        transition: "1s ease",
         backgroundColor: navBackground ? "black" : "",
-        backgroundImage: navBackground ? "" : 'linear-gradient(to right,#2d0039,#15003c)',
-        opacity: navBackground ? '90%' : '',
+        backgroundImage: navBackground
+            ? ""
+            : "linear-gradient(to right,#2d0039,#15003c)",
+        opacity: navBackground ? "90%" : "",
     };
     return (
-        <div class="navbar navbar-light fixed-top custom-nav" style={navBarStyling}>
-            <div className="container">
+        <Navbar
+            collapseOnSelect
+            expand="lg"
+            className="fixed-top custom-nav d-flex justify-content-between"
+            style={navBarStyling}
+        >
+            <Navbar.Brand href="/">
                 <img
                     src={logo}
                     width="214px"
@@ -34,10 +43,16 @@ const NavBar = () => {
                     className="d-inline-block align-top"
                     alt="TechQuotation logo"
                 />
-                <a href="#" className="text-light">Submit Request</a>
-            </div>
-
-        </div>
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="ml-auto">
+                    <Nav.Link href="/" className="text-light">
+                        Submit Request
+                    </Nav.Link>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
     );
 };
 

@@ -11,7 +11,7 @@ const Footer = () => {
                     alt="TechQuotation logo"
                 />
             
-            <footer>To join as a Service Provider, please click here for signup.<br></br><br></br>
+            <footer className="tnc">To join as a Service Provider, please <a href='/' className="tnc" style={{color:'#ff2161'}}>click here</a> for signup.<br></br><br></br>
                 Tech Quotations &copy; 2021 - All Rights Reserved.<br></br>
                 Terms & Conditions
             </footer>

@@ -1,8 +1,11 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 400;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Montserrat', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,10 +15,25 @@ code {
     monospace;
 }
 
+.navbar-toggle{
+  background-color: black;
+}
+
+.top-banner-text{
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: small !important;
+}
+
+.top-banner-title{
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: bolder !important;
+}
+
 .custom-nav{
   height: 100px;
-  /* background-color: black; */
-  /* opacity: 90%; */
+  padding-left: 10% !important;
+  padding-right: 10% !important;
 }
 
 .subheader{
@@ -27,13 +45,22 @@ code {
 }
 
 .forms{
-  padding-bottom: 10vh;
-  
+  /* padding-bottom: 10vh; */
+  padding-left: 10% !important;
+  padding-right: 10% !important;
+  font-size: small !important;
 }
 
 .heading-text{
-  color: red;
+  color: #ff2161;
   padding-bottom: 3vh;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder; 
+}
+
+.form-desc{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
 }
 
 .submit{
@@ -51,6 +78,20 @@ code {
   color: white;
   background-repeat: no-repeat;
   background-size:cover;
+  margin-top: 10vh;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color:#ff2161 !important;
+    border-color: #ff2161 !important;
+    border-radius: 0% !important;
+    width: 200px;
+    height: 50px;
+    font-size: medium !important;
 }
 
 .banner-text{
@@ -62,3 +103,26 @@ code {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+.form-group{
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.form-control:valid {
+  background-color:  #f0f1f1!important;
+  border-radius: 0 !important;
+}
+
+.form-control::placeholder,.form-control::option { 
+  color: red !important;
+  opacity: 1; 
+  border-radius: 0 !important;
+}
+
+.form-text{
+  font-weight: bold;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,33,97, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
